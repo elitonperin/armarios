@@ -22,8 +22,9 @@
                     $_SESSION['contatos'] = array();   
                 }
                 */
+                //$nome_, $email_, $curso_, $telefone_, $celular_, $rga_, $facebook_
                 
-                $obj = new Contato($_POST['nome'], $_POST['email']);
+                $obj = new Contato($_POST['nome'], $_POST['email'], $_POST['curso'], $_POST['telefone'], $_POST['celular'], $_POST['rga'], $_POST['facebook']  );
                 $resposta = NULL;
                 $existe = $banco->buscar($obj->getEmail());
                 
@@ -54,6 +55,12 @@
             case "busca":
                 include('../View/busca.php');
                 break;
+            case "login":
+                include('../View/login.php');
+                break;
+            case "logando":
+                include('../View/lista.php');
+                break;            
             case "buscar":
                 $contato = $banco->buscar($_POST['email']);
                 

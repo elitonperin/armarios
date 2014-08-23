@@ -41,5 +41,9 @@ and open the template in the editor.
             <a id="Inicio" href="../Controller/controle.php?action=indice">Início</a>        
         </p>
         
+        <p>
+            <a id="Busca" href="../Controller/controle.php?action=busca">Procurar um contato</a>
+        </p>
+        
     </body>
 </html>

@@ -7,7 +7,7 @@
     class ContatoFactory extends AbstractFactory {
         
         private $nometabela = "tbcontato";
-        private $campos = "nome, email";
+        private $campos = "nome, email, telefone, celular, curso, rga, facebook";
         
         public function __construct(){
             
@@ -20,7 +20,8 @@
             $contato = $obj;
             
             $sql = $this->db->prepare ("INSERT INTO ". $this->nometabela . " ( " . $this->campos . " ) VALUES ( '" . 
-                    $contato->getNome() . "','" . $contato->getEmail() . "' )");
+                    $contato->getNome() . "','" . $contato->getEmail() . "','" . $contato->getTelefone() . "','" . 
+                    $contato->getCelular() . "','" . $contato->getCurso() . "','" . $contato->getRga() . "','" . $contato->getFacebook() . "' )");
             
             if($sql->execute()){
                 return true;

@@ -15,11 +15,5 @@ and open the template in the editor.
         <p>
             <a id="Novo" href="../Controller/controle.php?action=novo">Cadastrar novo contato</a>
         </p>
-        <p>
-            <a id="Lista" href="../Controller/controle.php?action=lista">Listar seus contatos</a>        
-        </p>
-        <p>
-            <a id="Busca" href="../Controller/controle.php?action=busca">Busca</a>
-        </p>
     </body>
 </html>

@@ -11,13 +11,24 @@ and open the template in the editor.
     <body>
         <form action="../Controller/controle.php?action=cad" method="post">
             <h1>Cadastro</h1>
-            <p>Insira o nome e o email do seu contato.</p>
-            <p><label>Nome: <input name="nome" placeholder="Você"></label></p>
-            <p><label>Email: <input type="email" id="email_addr" name="email" placeholder="voce@email.com"  /></label></p>
-            <p><label>Telefone: <input type="number" id="telefone" name="email" placeholder="6733333333"  /></label></p>
-            <p><label>Celular: <input type="number" id="celular" name="email" placeholder="6799999999"  /></label></p>
-            <p><label>Curso: <input type="text" id="celular" name="email" placeholder="Computero"  /></label></p>
-            <p><label>Facebook: <input type="text" id="celular" name="email" placeholder="facebook.com/voce"  /></label></p>
+            <p>Insira seus dados de contato.</p>
+            <p><label>Nome  <input name="nome" placeholder="Você" required ></label></p>
+            <p><label>Email     <input type="email" id="email_addr" name="email" placeholder="voce@email.com" required /></label></p>
+            <p><label>RGA   <input type="number" id="rga" name="rga" placeholder="200000000000"  /></label></p>
+            <p><label>Telefone  <input type="phone" id="telefone" name="telefone" placeholder="6733333333"  /></label></p>
+            <p><label>Celular   <input type="phone" id="celular" name="celular" placeholder="6799999999"  /></label></p>
+            <label for="curso">Curso    <select id="curso" name="curso" type="text" >
+                <option value="Sem curso">Sem curso</option>
+                <option value="Ciência da Computação">Ciência da Computação</option>
+                <option value="Engenharia da Computação">Engenharia da Computação</option>
+                <option value="Análises de Sistemas">Análises de Sistemas</option>
+                <option value="Tecnologia em Redes">Tecnologia em Redes</option>
+                <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                <option value="Engenharia Civil">Engenharia Civil</option>
+                <option value="Engenharia de Produção">Engenharia de Produção</option>
+                <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
+            </select> </label>
+            <p><label>Facebook  <input type="text" id="facebook" name="facebook" placeholder="facebook.com/voce"  /></label></p>
             <p><input type="submit" name="submit" value="enviar"></p>
         </form>
         <?php
