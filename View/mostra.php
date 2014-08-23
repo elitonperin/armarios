@@ -11,9 +11,17 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
+            if($resposta != NULL){
+                echo $_POST['nome'].' incluido com sucesso na Agenda';                    
+            }else{
+                echo $_POST['nome'].' não cadastrado na Agenda';
+            }
         ?>
         <p>
             <a id="Novo" href="../Controller/controle.php?action=novo">Cadastrar novo contato</a>
+        </p>
+        <p>
+            <a id="Novo" href="../Controller/controle.php?action=indice">Voltar para o início</a>
         </p>
     </body>
 </html>

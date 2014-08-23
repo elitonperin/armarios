@@ -1,15 +1,19 @@
 <?php
     class Contato{
-        private $nome, $email;
+        private $id, $nome, $email,  $telefone, $facebook, $celular,  $rga, $curso ;
         
-        public function __construct($nome_, $email_, $curso_, $telefone_, $celular_, $rga_, $facebook_){
+        public function __construct($id_, $nome_, $email_, $telefone_,$facebook_, $celular_, $rga_ , $curso_){
+            $this->id = $id_;
             $this->nome = $nome_;
             $this->email = $email_;
-            $this->curso = $curso_;
             $this->telefone = $telefone_;
+            $this->facebook = $facebook_;
             $this->celular = $celular_;
             $this->rga = $rga_;
-            $this->facebook = $facebook_;
+            $this->curso = $curso_;
+        }
+        public function getId(){
+            return $this->id;
         }
         public function getNome(){
             return $this->nome;

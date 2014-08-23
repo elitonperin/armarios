@@ -22,9 +22,8 @@
                     $_SESSION['contatos'] = array();   
                 }
                 */
-                //$nome_, $email_, $curso_, $telefone_, $celular_, $rga_, $facebook_
-                
-                $obj = new Contato($_POST['nome'], $_POST['email'], $_POST['curso'], $_POST['telefone'], $_POST['celular'], $_POST['rga'], $_POST['facebook']  );
+                // $nome_, $email_, $telefone_,$facebook_, $celular_, $rga_ , $curso_
+                $obj = new Contato( NULL, $_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['facebook'], $_POST['celular'], $_POST['rga'], $_POST['curso']  );
                 $resposta = NULL;
                 $existe = $banco->buscar($obj->getEmail());
                 
@@ -36,11 +35,6 @@
                 array_push($_SESSION['contatos'], $obj);            
                 */
                 
-                if($resposta != NULL){
-                    echo $_POST['nome'].' incluido com sucesso na Agenda';                    
-                }else{
-                    echo $_POST['nome'].' não cadastrado na Agenda';
-                }
                 
                 include('../View/mostra.php');
                 break;

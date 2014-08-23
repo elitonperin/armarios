@@ -35,10 +35,14 @@
             $sql = $this->db->prepare("SELECT * FROM ". $this->nometabela);
             $sql->execute();
             $vetorContato = parent::queryRowsToListOfObjects($sql, "Contato");
-            
             foreach($vetorContato as $contato){
-                    echo "Nome do contato: " . $contato->getNome() . "<br/> ";
-                    echo "Email: " . $contato->getEmail() . "<br/><br/>";                
+                    //echo "Id: " . $contato->getId() . "<br>";<tr>
+                    echo "<tr><td>" . $contato->getNome() . "</td> ";
+                    echo "<td>" . $contato->getEmail() . "</td>";   
+                    echo "<td>" . $contato->getTelefone() . "</td>";
+                    echo "<td>" . $contato->getCelular() . "</td>";   
+                    echo "<td>" . $contato->getFacebook() . "</td>";
+                    echo "<td>" . $contato->getCurso() . "</td></tr>";                
             }
         }
         

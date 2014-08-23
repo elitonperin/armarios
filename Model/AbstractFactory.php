@@ -54,7 +54,7 @@ abstract class AbstractFactory {
         $list = array();
         $result = $result->fetchAll(PDO::FETCH_NUM);
         foreach ($result as $row) {
-            unset($row[0]);
+            //unset($row[0]);
             $ref = new ReflectionClass($nameObject);
             $list[] = $ref->newInstanceArgs($row);
         }

@@ -13,9 +13,18 @@ and open the template in the editor.
             require_once '../Model/Contato.php';
             require_once '../Model/ContatoFactory.php';
             require_once '../Controller/controle.php';
-            
+            echo   "<table border=\"1\">
+                    <tr>
+                    <th>Nome</th>
+                    <th>e-mail</th>
+                    <th>Telefone</th>
+                    <th>Celular</th>
+                    <th>Facebook</th>
+                    <th>Curso</th>
+                    </tr>";
+
             $banco->listar();
-            
+            echo "</table>";
                                    
             /* 
              * Esta é a função antiga para imprimir os dados usando a variável $_SESSION
