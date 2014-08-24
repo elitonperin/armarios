@@ -31,6 +31,9 @@ and open the template in the editor.
             <p><label>Facebook  <input type="text" id="facebook" name="facebook" placeholder="facebook.com/voce"  /></label></p>
             <p><input type="submit" name="submit" value="enviar"></p>
         </form>
+        <p>
+            <a id="Novo" href="../Controller/controle.php?action=indice">Voltar para o início</a>
+        </p>
         <?php
             // put your code here
         ?>

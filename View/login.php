@@ -15,5 +15,8 @@ and open the template in the editor.
             <p><label>Senha     <input type="password" id="senha" name="senha" required /></label></p>
             <p><input type="submit" name="submit" value="enviar"></p>
         </form>
+        <p>
+            <a id="Novo" href="../Controller/controle.php?action=indice">Voltar para o início</a>
+        </p>
     </body>
 </html>
