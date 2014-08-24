@@ -1,6 +1,8 @@
 <?php
         require_once '../Model/Contato.php';
         require_once '../Model/ContatoFactory.php';
+        require_once '../Model/Administrador.php';
+        require_once '../Model/AdministradorFactory.php';
         
         ini_set('error_reporting', E_ALL);
         ini_set('display_errors', 1);
@@ -8,13 +10,42 @@
         
         $action = $_GET['action'];
         $banco = new ContatoFactory();
+        $bancoAdm = new AdministradorFactory();
         
         switch($action){
             
             case "novo":
                 include('../View/novo.php');
                 break;
-            
+            case "novoadm":
+                include('../View/novoadm.php');
+                break;
+            case "cadadm":
+                $senhaerrada = true;
+                $loginerrado = true;
+
+                if($_POST['senha1'] == $_POST['senha2']){
+                    $senhaerrada = false;
+
+        //private $id, $nome, $login, $senha, $entrada, $ativo, $data_desativacao, $email;
+                    $obj = new Administrador( NULL, $_POST['nome'], $_POST['login'],
+                     md5($_POST['senha1']), date('d/m/Y'), 1, '0', $_POST['email']  );
+                    $resposta = NULL;
+                    $existe = $bancoAdm->buscar($obj->getLogin());
+                    
+                    if( $existe == NULL){
+                        $loginerrado = false;
+                        $resposta = $bancoAdm->salvar($obj);
+                        include('../View/lista.php');
+                    }else{
+                        include('../View/exibe_erros.php');
+                    }
+                }else{
+                    include('../View/exibe_erros.php');
+                }
+
+
+                break;
             case "cad":
                 /*
                 if( !isset($_SESSION['contatos']) )
@@ -53,7 +84,19 @@
                 include('../View/login.php');
                 break;
             case "logando":
-                include('../View/lista.php');
+
+                $existe = $bancoAdm->buscar($_POST['login']);
+                if($existe == NULL){
+                    include('../View/login.php');
+                    echo "<p>Login não existe.</p>";
+                }else{
+                    if($existe[0]->getSenha() == md5($_POST['senha'])){
+                        include('../View/lista.php');
+                    }else{
+                        include('../View/login.php');
+                        echo "<p>Senha errada.</p>";                        
+                    }
+                }
                 break;            
             case "buscar":
                 $contato = $banco->buscar($_POST['email']);

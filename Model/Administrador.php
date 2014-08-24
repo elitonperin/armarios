@@ -1,14 +1,22 @@
 <?php
     class Administrador{
-        private $nome, $email;
+        private $id, $nome, $login, $senha, $entrada, $ativo, $data_desativacao, $email;
         
-        public function __construct($nome_, $email_, $curso_, $telefone_, $celular_, $rga_, $facebook_){
+        public function __construct($id_, $nome_, $login_, $senha_, $entrada_, $ativo_, $data_desativacao_, $email_){
+            $this->id = $id_;
             $this->nome = $nome_;
             $this->email = $email_;
             $this->login = $login_;
+            $this->senha = $senha_;
             $this->entrada = $entrada_;
             $this->ativo = $ativo_;
             $this->data_desativo = NULL;
+        }
+        public function getId(){
+            return $this->id;
+        }
+        public function getSenha(){
+            return $this->senha;
         }
         public function getNome(){
             return $this->nome;
@@ -25,7 +33,7 @@
         public function getAtivo(){
             return $this->ativo;
         }
-        public function getDataDesativo(){
+        public function getDataDesativacao(){
             return $this->data_desativo;
         }
     }

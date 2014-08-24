@@ -17,7 +17,7 @@ and open the template in the editor.
             <p><label>RGA   <input type="number" id="rga" name="rga" placeholder="200000000000"  /></label></p>
             <p><label>Telefone  <input type="phone" id="telefone" name="telefone" placeholder="6733333333"  /></label></p>
             <p><label>Celular   <input type="phone" id="celular" name="celular" placeholder="6799999999"  /></label></p>
-            <label for="curso">Curso    <select id="curso" name="curso" type="text" >
+            <label for="curso">Curso <select id="curso" name="curso" type="text" >
                 <option value="Sem curso">Sem curso</option>
                 <option value="Ciência da Computação">Ciência da Computação</option>
                 <option value="Engenharia da Computação">Engenharia da Computação</option>

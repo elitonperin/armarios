@@ -12,7 +12,12 @@ and open the template in the editor.
         <?php
             require_once '../Model/Contato.php';
             require_once '../Model/ContatoFactory.php';
+            require_once '../Model/Administrador.php';
+            require_once '../Model/AdministradorFactory.php';
             require_once '../Controller/controle.php';
+
+            echo "<p>Usuários cadastrados</p>";
+
             echo   "<table border=\"1\">
                     <tr>
                     <th>Nome</th>
@@ -25,6 +30,23 @@ and open the template in the editor.
 
             $banco->listar();
             echo "</table>";
+
+            echo "<p>Administradores</p>";
+
+            echo   "<table border=\"1\">
+                    <tr>
+                    <th>Nome</th>
+                    <th>e-mail</th>
+                    <th>Login</th>
+                    <th>Ativo</th>
+                    <th>Data de entrada</th>
+                    <th>Data de saída</th>
+                    </tr>";
+
+            $bancoAdm->listar();
+            echo "</table>";
+
+            echo "<p>".date('d/m/Y')."</p>";
                                    
             /* 
              * Esta é a função antiga para imprimir os dados usando a variável $_SESSION
@@ -44,7 +66,10 @@ and open the template in the editor.
         ?>
         
         <p>
-            <a id="Novo" href="../Controller/controle.php?action=novo">Novo</a>
+            <a id="Novo" href="../Controller/controle.php?action=novo">Novo usuário</a>
+        </p>
+        <p>
+            <a id="Novo" href="../Controller/controle.php?action=novoadm">Novo administrador</a>
         </p>
         <p>
             <a id="Inicio" href="../Controller/controle.php?action=indice">Início</a>        
