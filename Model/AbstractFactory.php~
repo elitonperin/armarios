@@ -12,7 +12,7 @@ abstract class AbstractFactory {
     public function __construct() {
 
         try {
-            $this->db = new PDO("sqlite:../../banco/DBContato.sqlite");
+            $this->db = new PDO("sqlite:../Model/DBContato.sqlite");
         } catch (PDOException $exception) {
             echo $exception->getMessage();
         } catch (Exception $exception) {
