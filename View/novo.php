@@ -6,11 +6,12 @@ and open the template in the editor.
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastro de Contato</title>
+        <title>Cadastro de usuário</title>
     </head>
     <body>
         <form action="../Controller/controle.php?action=cad" method="post">
             <h1>Cadastro</h1>
+            <p>Primeiro você irá preencher nossos formulários com seus dados, se tudo ocorrer bem você poderá reservar um armário utilizando seu email cadastrado, por isso ele é obrigatório. Certifique-se que ele esteja correto.</p>
             <p>Insira seus dados de contato.</p>
             <p><label>Nome  <input name="nome" placeholder="Você" required ></label></p>
             <p><label>Email     <input type="email" id="email_addr" name="email" placeholder="voce@email.com" required /></label></p>
