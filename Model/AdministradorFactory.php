@@ -41,9 +41,17 @@
                     echo "<tr><td>" . $contato->getNome() . "</td> ";
                     echo "<td>" . $contato->getEmail() . "</td>";   
                     echo "<td>" . $contato->getLogin() . "</td>";
-                    echo "<td>" . $contato->getAtivo() . "</td>";   
+                    echo "<td>";
+                    if($contato->getAtivo() == 1){
+                        echo "Sim";
+                    }else{
+                        echo "Não";
+                    }
+                    echo "</td>";   
                     echo "<td>" . $contato->getEntrada() . "</td>";
-                    echo "<td>" . $contato->getDataDesativacao() . "</td></tr>";                
+                    echo "<td>" . $contato->getDataDesativacao() . "</td>";
+                    echo "<td><a id=\"Editar\" href=\"../Controller/controle.php?action=editaradm&id=".
+                    $contato->getId()."\">Editar</a></td></tr>";
             }
         }
         
@@ -59,6 +67,13 @@
             }
             
         }
-        
+
+        public function editar($adm){
+            $sql = $this->db->prepare("UPDATE ". $this->nometabela .
+                " SET nome = '".$adm->getNome()."', login = '".$adm->getLogin()."', senha = '".$adm->getSenha().
+                "', ativo = '". $adm->getAtivo()."', email = '".$adm->getEmail()."' WHERE id = '" . $adm->getId() . "'");
+            $sql->execute();
+            return $sql;
+        }
     }
 ?>

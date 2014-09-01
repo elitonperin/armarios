@@ -42,7 +42,9 @@
                     echo "<td>" . $contato->getTelefone() . "</td>";
                     echo "<td>" . $contato->getCelular() . "</td>";   
                     echo "<td>" . $contato->getFacebook() . "</td>";
-                    echo "<td>" . $contato->getCurso() . "</td></tr>";                
+                    echo "<td>" . $contato->getCurso() . "</td>";
+                    echo "<td><a id=\"Editar\" href=\"../Controller/controle.php?action=editar&id=".
+                    $contato->getId()."\">Editar</a></td></tr>";                
             }
         }
         

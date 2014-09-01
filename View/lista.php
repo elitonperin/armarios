@@ -26,6 +26,7 @@ and open the template in the editor.
                     <th>Celular</th>
                     <th>Facebook</th>
                     <th>Curso</th>
+                    <th>Editar</th>
                     </tr>";
 
             $banco->listar();
@@ -41,6 +42,7 @@ and open the template in the editor.
                     <th>Ativo</th>
                     <th>Data de entrada</th>
                     <th>Data de saída</th>
+                    <th>Editar</th>
                     </tr>";
 
             $bancoAdm->listar();
