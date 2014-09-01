@@ -18,7 +18,7 @@ and open the template in the editor.
             }else{
                 echo '<p>'.$_POST['nome'].' não cadastrado na Agenda</p>';
                 echo '<p>Verifique se seu email já não está cadastrado nesse link abaixo,
-                 caso contrário é um problema em nosso sistema.</p>'
+                 caso contrário é um problema em nosso sistema.</p>';
             }
         ?>
         <p>
