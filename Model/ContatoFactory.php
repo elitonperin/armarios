@@ -6,7 +6,7 @@
         // put your code here
     class ContatoFactory extends AbstractFactory {
         
-        private $nometabela = "tbcontato";
+        private $nometabela = "tbusuario";
         private $campos = "nome, email, telefone, celular, curso, rga, facebook";
         
         public function __construct(){
