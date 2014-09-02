@@ -21,11 +21,11 @@
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/gestao.php">Gestão</a>
+        		<a href="../View/impressora.php">Impressora</a>
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/impressora.php">Impressora</a>
+        		<a href="../View/gestao.php">Gestão</a>
         	</div>
 
         </div>
