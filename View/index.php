@@ -29,7 +29,7 @@
         	</div>
         	
         	<div class = "menuItem">
-        		<a href="../View/armario.html">Armário</a>
+        		<a href="../View/armarios.html">Armário</a>
         	</div>
         	
         </div>
