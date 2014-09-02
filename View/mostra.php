@@ -9,6 +9,16 @@ and open the template in the editor.
         <title>Cadastrado de usuário</title>
     </head>
     <body>
+        
+        <div class = "menu">
+            <div class = "menuItem">
+				<a id="Novo" href="../Controller/controle.php?action=novo">Novo usuário</a>
+            </div>
+			
+            <div class = "menuItem">
+                <a id="Novo" href="../Controller/controle.php?action=indice">Início</a>
+			</div>
+        </div>
         <?php
         // put your code here
             if($resposta != NULL){
@@ -21,11 +31,6 @@ and open the template in the editor.
                  caso contrário é um problema em nosso sistema.</p>';
             }
         ?>
-        <p>
-            <a id="Novo" href="../Controller/controle.php?action=novo">Cadastrar novo usuário</a>
-        </p>
-        <p>
-            <a id="Novo" href="../Controller/controle.php?action=indice">Voltar para o início</a>
-        </p>
+       
     </body>
 </html>

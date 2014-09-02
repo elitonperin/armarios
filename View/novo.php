@@ -13,11 +13,10 @@ and open the template in the editor.
             <h1>Cadastro</h1>
             <p>Primeiro você irá preencher nossos formulários com seus dados, se tudo ocorrer bem você poderá reservar um armário utilizando seu email cadastrado, por isso ele é obrigatório. Certifique-se que ele esteja correto.</p>
             <p>Insira seus dados de contato.</p>
+            <p><label>RGA   <input type="number" id="RGA" name="RGA" placeholder="200000000000"  /></label></p>
             <p><label>Nome  <input name="nome" placeholder="Você" required ></label></p>
             <p><label>Email     <input type="email" id="email_addr" name="email" placeholder="voce@email.com" required /></label></p>
-            <p><label>RGA   <input type="number" id="rga" name="rga" placeholder="200000000000"  /></label></p>
-            <p><label>Telefone  <input type="phone" id="telefone" name="telefone" placeholder="6733333333"  /></label></p>
-            <p><label>Celular   <input type="phone" id="celular" name="celular" placeholder="6799999999"  /></label></p>
+            
             <label for="curso">Curso <select id="curso" name="curso" type="text" >
                 <option value="Sem curso">Sem curso</option>
                 <option value="Ciência da Computação">Ciência da Computação</option>
@@ -56,6 +55,8 @@ and open the template in the editor.
                 <option value="Química">Química</option>
                 <option value="Outros">Outros</option>
             </select> </label>
+            <p><label>Telefone 1  <input type="phone" id="telefone1" name="telefone1" placeholder="6733333333"  /></label></p>
+            <p><label>Telefone 2  <input type="phone" id="telefone2" name="telefone2" placeholder="6799999999"  /></label></p>
             <p><label>Facebook  <input type="text" id="facebook" name="facebook" placeholder="facebook.com/voce"  /></label></p>
             <p><input type="submit" name="submit" value="enviar"></p>
         </form>

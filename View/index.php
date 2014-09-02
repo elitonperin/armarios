@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../Style/style.css">
  		<title>CACOM</title>
 	</head>
 	<body>
@@ -17,19 +17,19 @@
         <div class = "menu">
 
         	<div class = "menuItem">
-        		<a href="../View/quemSomos.html">Quem Somos</a>
+        		<a href="../View/quemSomos.php">Quem Somos</a>
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/localizacao.html">Localização</a>
+        		<a href="../View/localizacao.php">Localização</a>
         	</div>
 
 			<div class = "menuItem">
-        		<a href="../View/historia.html">História</a>
+        		<a href="../View/historia.php">História</a>
         	</div>
         	
         	<div class = "menuItem">
-        		<a href="../View/armario.html">Armário</a>
+        		<a href="../View/armarios.php">Armário</a>
         	</div>
         	
         </div>

@@ -1,3 +1,4 @@
+
 <?php
         require_once '../Model/Contato.php';
         require_once '../Model/ContatoFactory.php';
@@ -17,8 +18,8 @@
             case "novo":
                 include('../View/novo.php');
                 break;
-            case "novoadm":
-                include('../View/novoadm.php');
+            case "novoAdm":
+                include('../View/novoAdm.php');
                 break;
             case "cadadm":
                 $senhaerrada = true;
@@ -38,10 +39,10 @@
                         $resposta = $bancoAdm->salvar($obj);
                         include('../View/lista.php');
                     }else{
-                        include('../View/exibe_erros.php');
+                        include('../View/exibeErros.php');
                     }
                 }else{
-                    include('../View/exibe_erros.php');
+                    include('../View/exibeErros.php');
                 }
 
 
@@ -53,8 +54,8 @@
                     $_SESSION['contatos'] = array();   
                 }
                 */
-                // $nome_, $email_, $telefone_,$facebook_, $celular_, $rga_ , $curso_
-                $obj = new Contato( NULL, $_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['facebook'], $_POST['celular'], $_POST['rga'], $_POST['curso']  );
+                // $nome_, $email_, $telefone_,$facebook_, $celular_, $RGA_ , $curso_
+                $obj = new Contato(NULL, $_POST['RGA'], $_POST['nome'], $_POST['email'], $_POST['curso'], $_POST['telefone1'], $_POST['telefone2'], $_POST['facebook']  );
                 $resposta = NULL;
                 $existe = $banco->buscar($obj->getEmail());
                 

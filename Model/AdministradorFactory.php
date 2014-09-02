@@ -50,7 +50,7 @@
                     echo "</td>";   
                     echo "<td>" . $contato->getEntrada() . "</td>";
                     echo "<td>" . $contato->getDataDesativacao() . "</td>";
-                    echo "<td><a id=\"Editar\" href=\"../Controller/controle.php?action=editaradm&id=".
+                    echo "<td><a id=\"Editar\" href=\"../Controller/controle.php?action=editarAdm&id=".
                     $contato->getId()."\">Editar</a></td></tr>";
             }
         }

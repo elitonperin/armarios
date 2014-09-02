@@ -1,0 +1,1 @@
+<p>Somos o centro acadêmico de ciência da computação da Faculdade de Computação da UFMS.</p>
