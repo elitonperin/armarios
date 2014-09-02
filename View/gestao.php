@@ -21,25 +21,27 @@
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/impressora.php">Impressora</a>
+        		<a href="../View/gestao.php">Gestão</a>
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/gestao.php">Gestão</a>
+        		<a href="../View/impressora.php">Impressora</a>
         	</div>
-        	
+
         </div>
 
 
 		<!-- Conteudo -->	
-		<div class = "conteudo">
+        <div class = "conteudo">
         	
-			<!-- Corpo -->
-			<div class= "core">
-				<div class = "subCore">
-					$bancoArmario->listar();
-				</div>
-        	
+
+
+        	<!-- Corpo -->
+        	<div class= "core">
+        		<a href="../View/gestao.php">Estatuto da CACOM</a>
+
+        		<a href="https://drive.google.com/drive/#folders/0B_5IzvyoQu-sWmlIcHNrcHdXVUE">Informações da gestão</a>
+        			
         	</div>
         	<div class = "sidebar">
 	        	<!-- Login -->

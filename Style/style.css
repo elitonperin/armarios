@@ -33,11 +33,18 @@
 .core
 {
 	float: left;
-	background:#E0E0E0  ;
 	width: 70%;
 	height: 100%; 
 	margin: 20px;
-	text-align: center;
+	
+}
+
+.subCore
+{
+	background:#E0E0E0  ;
+	width: 100%;
+	margin: 20px;
+	text-align: left;
 }
 .sideBar
 {
