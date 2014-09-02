@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="../Style/style.css">
- 		<title>CACOM</title>
+ 		<title>Gestão</title>
 	</head>
 	<body>
 		
@@ -15,23 +15,19 @@
         </div>
         <!-- Menu -->	
         <div class = "menu">
-
+       	
         	<div class = "menuItem">
-        		<a href="../View/quemSomos.php">Quem Somos</a>
+        		<a href="../View/armarios.php">Armários</a>
         	</div>
 
         	<div class = "menuItem">
-        		<a href="../View/localizacao.php">Localização</a>
-        	</div>
-
-			<div class = "menuItem">
-        		<a href="../View/historia.php">História</a>
+        		<a href="../View/impressora.php">Impressora</a>
         	</div>
         	
         	<div class = "menuItem">
-        		<a href="../View/armarios.php">Armário</a>
+        		<a href="../View/gestao.php">Gestão</a>
         	</div>
-        	
+
         </div>
 
 
@@ -40,7 +36,9 @@
         	
         	<!-- Corpo -->
         	<div class= "core">
-        		ISTO DEVE FICAR AO LADO ESQUERDO DA SIDEBAR	
+        		<div class = "subCore">
+        			Não sei o que colocaremos aqui
+        		</div>	
         	</div>
         	<div class = "sidebar">
 	        	<!-- Login -->

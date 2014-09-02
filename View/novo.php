@@ -15,7 +15,7 @@ and open the template in the editor.
             <p>Insira seus dados de contato.</p>
             <p><label>RGA   <input type="number" id="RGA" name="RGA" placeholder="200000000000"  /></label></p>
             <p><label>Nome  <input name="nome" placeholder="Você" required ></label></p>
-            <p><label>Email     <input type="email" id="email_addr" name="email" placeholder="voce@email.com" required /></label></p>
+            <p><label>Email <input type="email" id="email_addr" name="email" placeholder="voce@email.com" required /></label></p>
             
             <label for="curso">Curso <select id="curso" name="curso" type="text" >
                 <option value="Sem curso">Sem curso</option>
