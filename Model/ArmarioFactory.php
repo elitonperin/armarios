@@ -47,7 +47,7 @@
             }
         }
         
-        public function buscar()
+        public function buscarVago()
         {
             
             $sql = $this->db->prepare("SELECT * FROM ". $this->nometabela . " WHERE email = 'vago'");
