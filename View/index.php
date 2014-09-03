@@ -52,11 +52,11 @@
 
 				<div class = "linksExternos">
 					Links Externos:
-					 <ul>
-						<li><a href="http://www-nt.ufms.br/">UFMS</a></li>
-						<li><a href="http://facom.ufms.br/">FACOM</a></li>
-						<li><a href="http://ead.facom.ufms.br/">EAD</a></li>
-					</ul>
+					 <dl>
+						<dt><a href="http://www-nt.ufms.br/">UFMS</a></dt>
+						<dt><a href="http://facom.ufms.br/">FACOM</a></dt>
+						<dt><a href="http://ead.facom.ufms.br/">EAD</a></dt>
+					</dl>
 				</div>
 			</div>
 
