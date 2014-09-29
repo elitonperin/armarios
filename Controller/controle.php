@@ -6,6 +6,8 @@
         require_once '../Model/AdministradorFactory.php';
         require_once '../Model/Armario.php';
         require_once '../Model/ArmarioFactory.php';
+        require_once '../Model/Aluguel.php';
+        require_once '../Model/AluguelFactory.php';
         
         ini_set('error_reporting', E_ALL);
         ini_set('display_errors', 1);
@@ -15,6 +17,7 @@
         $bancoCont = new ContatoFactory();
         $bancoAdm = new AdministradorFactory();
         $bancoArm = new ArmarioFactory();
+        $bancoAlu = new AluguelFactory();
         
         switch($action){
             

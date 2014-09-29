@@ -19,6 +19,8 @@ and open the template in the editor.
 				require_once '../Model/AdministradorFactory.php';
 				require_once '../Model/Armario.php';
 				require_once '../Model/ArmarioFactory.php';
+		        require_once '../Model/Aluguel.php';
+		        require_once '../Model/AluguelFactory.php';
 				require_once '../Controller/controle.php';
 
 
@@ -67,6 +69,21 @@ and open the template in the editor.
 	                    <th>Editar</th>";
 
 	        	$bancoArm->listar();
+	        	
+	            echo "</table>";
+
+	            echo "<p>Aluguel</p>";
+
+	            echo   "<table border=\"1\">
+	                    <tr>
+	                    <th>Número</th>
+	                    <th>Usuário</th>
+	                    <th>Armário</th>
+	                    <th>Data Entrada</th>
+	                    <th>Data Saída</th>
+	                    <th>Editar</th>";
+
+	        	$bancoAlu->listar();
 	        	
 	            echo "</table>";
 
