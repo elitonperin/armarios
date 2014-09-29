@@ -4,14 +4,17 @@
         require_once '../Model/ContatoFactory.php';
         require_once '../Model/Administrador.php';
         require_once '../Model/AdministradorFactory.php';
+        require_once '../Model/Armario.php';
+        require_once '../Model/ArmarioFactory.php';
         
         ini_set('error_reporting', E_ALL);
         ini_set('display_errors', 1);
         session_start();
         
         $action = $_GET['action'];
-        $banco = new ContatoFactory();
+        $bancoCont = new ContatoFactory();
         $bancoAdm = new AdministradorFactory();
+        $bancoArm = new ArmarioFactory();
         
         switch($action){
             
@@ -57,10 +60,10 @@
                 // $nome_, $email_, $telefone_,$facebook_, $celular_, $RGA_ , $curso_
                 $obj = new Contato(NULL, $_POST['RGA'], $_POST['nome'], $_POST['email'], $_POST['curso'], $_POST['telefone1'], $_POST['telefone2'], $_POST['facebook']  );
                 $resposta = NULL;
-                $existe = $banco->buscar($obj->getEmail());
+                $existe = $bancoCont->buscar($obj->getEmail());
                 
                 if( $existe == NULL){
-                    $resposta = $banco->salvar($obj);
+                    $resposta = $bancoCont->salvar($obj);
                 }
                 
                 /*
@@ -100,7 +103,7 @@
                 }
                 break;            
             case "buscar":
-                $contato = $banco->buscar($_POST['email']);
+                $contato = $bancoCont->buscar($_POST['email']);
                 
                 if($contato != NULL){
                     foreach($contato as $cont){
@@ -113,5 +116,13 @@
                 }
                 
                 include('../View/mostra.php');
+                break;
+            case "listaArmarios":
+                $armarios = $bancoArm->buscarVago();
+
+                include('../View/listaArmarios.php');
+
+                break;
+
         }
 ?>

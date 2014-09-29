@@ -17,6 +17,8 @@ and open the template in the editor.
 				require_once '../Model/ContatoFactory.php';
 				require_once '../Model/Administrador.php';
 				require_once '../Model/AdministradorFactory.php';
+				require_once '../Model/Armario.php';
+				require_once '../Model/ArmarioFactory.php';
 				require_once '../Controller/controle.php';
 
 
@@ -35,7 +37,7 @@ and open the template in the editor.
 						<th>Editar</th>
 						</tr>";
 
-	            $banco->listar();
+	            $bancoCont->listar();
 	            echo "</table>";
 
 	            echo "<p>Administradores</p>";
@@ -52,12 +54,26 @@ and open the template in the editor.
 	                    </tr>";
 
 	            $bancoAdm->listar();
+
 	            echo "</table>";
 
-	            echo "<p>".date('d/m/Y')."</p>";
+
+	            echo "<p>Armários</p>";
+
+	            echo   "<table border=\"1\">
+	                    <tr>
+	                    <th>Número</th>
+	                    <th>Situação</th>
+	                    <th>Editar</th>";
+
+	        	$bancoArm->listar();
+	        	
+	            echo "</table>";
+
 	                                   
 	            /* 
 	             * Esta é a função antiga para imprimir os dados usando a variável $_SESSION
+
 	             * 
 	            if(isset($_SESSION['contatos'])){
 	                $contatos = $_SESSION['contatos'];
@@ -70,6 +86,7 @@ and open the template in the editor.
 	                echo "Lista Vazia.";
 	            }
 	             * */
+	            echo "<p>".date('d/m/Y')."</p>";
             
         	?>
         </div>
@@ -94,16 +111,9 @@ and open the template in the editor.
 						<a id="Busca" href="../Controller/controle.php?action=busca">Procurar um contato</a>
                     </li>
                    
-           
-                    
-            
-                            
-           
-                   
                 </ul>
             </div>
         </div>
-           
-       
+
     </body>
 </html>

@@ -6,8 +6,8 @@
         // put your code here
     class ArmarioFactory extends AbstractFactory {
         
-        private $nometabela = "tbArmario";
-        private $campos = "id, situacao";
+        private $nometabela = "tbarmario";
+        private $campos = "id, numero, situacao";
         
         public function __construct(){
             
@@ -20,7 +20,7 @@
             $contato = $obj;
             
             $sql = $this->db->prepare ("INSERT INTO ". $this->nometabela . " ( " . $this->campos . " ) VALUES ( '" . 
-                    $armario->getId() . "','" . $armario->getSituacao() ."' )");
+                    $armario->getId() . "','" .$armario->getNumero() . "','" . $armario->getSituacao() ."' )");
             
             if($sql->execute())
             {
@@ -46,11 +46,23 @@
                              
             }
         }
+
+        public function buscar($param){
+
+            $sql = $this->db->prepare("SELECT * FROM ". $this->nometabela . " WHERE id = '" . $param . "'");
+            $sql->execute();
+            $adm = parent::queryRowsToListOfObjects($sql, "Armario");
+            if($adm != NULL){
+                return $adm;
+            }else{
+                return false;
+            }
+        }
         
         public function buscarVago()
         {
             
-            $sql = $this->db->prepare("SELECT * FROM ". $this->nometabela . " WHERE email = 'vago'");
+            $sql = $this->db->prepare("SELECT * FROM ". $this->nometabela . " WHERE  situacao = 'vago'");
             $sql->execute();
             $armario = parent::queryRowsToListOfObjects($sql, "Armario");
             
